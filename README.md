@@ -10,8 +10,8 @@ Welcome to CS 110. I look forward to working with you this semester. This is you
 
 ## Student Info - MUST BE COMPLETED
 
-Preferred Name:Fatime
+Preferred Name: Fatime Useini
 
-Discord username:Fatime Useini#4096
+Discord username: Fatime Useini #4096
 
-REPL url:https://replit.com/@FatimeUseini
+REPL url: https://replit.com/@FatimeUseini
