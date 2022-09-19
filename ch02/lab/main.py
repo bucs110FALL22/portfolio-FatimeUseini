@@ -1,4 +1,4 @@
-
+cd
 #Part A
 weeks = 16
 classes = 5
