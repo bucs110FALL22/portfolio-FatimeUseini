@@ -18,9 +18,36 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
+x = random.randrange(0,101)
+michelangelo.forward(x)
+michelangelo.goto(-100,20)
+leonardo.forward(x)
+leonardo.goto(-100,-20)
 
+for i in range(20):
+  x = random.randrange(0,11)
+  michelangelo.forward(x)
+  leonardo.forward(x)
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
+window.exitonclick()
 
 # PART B - complete part B here
+import pygame
+pygame.init()
+window = pygame.display.set_mode()
+import math 
+coords=list(x,y)
+num_sides=int(3)
+side_length=int(10)
+offset=int(10)
+for i in (num_sides):
+  theta = (2.0 * math.pi * (i))/num_sides
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  pygame.draw.polygon(screen,Black,[x,y]
+  pygame.display.flip()
+  pygame.time.wait(100)
+  window.fill()
 
-
-window.exitonclick()
+  
