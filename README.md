@@ -1,4 +1,4 @@
 #CS110 Portfolio
 Preferred Name: Fatime Useini
-Discord Username:
-REPL url: 
+Discord Username: Fatime Useini #4096
+REPL url: https://replit.com/@FatimeUseini 
