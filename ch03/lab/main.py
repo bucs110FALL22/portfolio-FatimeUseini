@@ -35,19 +35,26 @@ window.exitonclick()
 # PART B - complete part B here
 import pygame
 pygame.init()
-window = pygame.display.set_mode()
+WINDOW_SIZE=[300,300]
+window = pygame.display.set_mode(WINDOW_SIZE)
+green= (0,255,0)
+window.fill(green)
 import math 
-coords=list(x,y)
-num_sides=int(3)
-side_length=int(10)
-offset=int(10)
-for i in (num_sides):
+num_sides=(3)
+side_length=(10)
+offset=(10)
+for i in range(1):
   theta = (2.0 * math.pi * (i))/num_sides
-  x = side_length * math.cos(theta) + offset
-  y = side_length * math.sin(theta) + offset
-  pygame.draw.polygon(screen,Black,[x,y]
-  pygame.display.flip()
-  pygame.time.wait(100)
-  window.fill()
+  x1 = side_length * math.cos(theta) + offset
+  y1 = side_length * math.sin(theta) + offset
+  theta = (2.0 * math.pi * (i))/num_sides
+  x2 = side_length * math.cos(theta) + offset
+  y2 = side_length * math.sin(theta) + offset
+  theta = (2.0 * math.pi * (i))/num_sides
+  x3 = side_length * math.cos(theta) + offset
+  y3 = side_length * math.sin(theta) + offset
+coords=[(x1,y1),(x2,y2),(x3,y3)]
+black= (0,0,0)
+pygame.draw.polygon(window,black,coords)
 
   
