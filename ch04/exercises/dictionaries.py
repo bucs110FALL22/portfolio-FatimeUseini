@@ -4,7 +4,6 @@ substitutions = {
                   "Purple": "Gray",
                   "newest": "oldest",
                   "belong":"don't belong",
-                  "music video":"musical",
                   "called": "named",
                   "all":"your moms",
                   "voices":"voice",
