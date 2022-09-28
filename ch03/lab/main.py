@@ -56,5 +56,4 @@ for i in range(1):
 coords=[(x1,y1),(x2,y2),(x3,y3)]
 black= (0,0,0)
 pygame.draw.polygon(window,black,coords)
-
   

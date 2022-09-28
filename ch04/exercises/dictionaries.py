@@ -1,18 +1,24 @@
-text= 
-{
-    "white house":"Pit of Despair",
-    "allegedly":"totally",
-    "bill":"snap I didn’t screenshot",
-    "official":"puppy",
-    "congressional":"spaaaaace",
-    "republican":"piano accordionist",
-    "democrat":"chromatic button accordionist",
-    "senator": "magical wizard",
-    "representative": "unmagical wizard",
-    "secretary":"eating champion",
-    "leaders":"goblins",
-    "washington":"Mount Doom",
-    "president": "you know, the guy"
+article= "A new purple M&M has joined the bag!'Purple' is the chocolate candy's first-ever female peanut M&M and its newest character for the first time in a decade, the brand announced Wednesday, Sept. 28. With the new spokescandy working to 'help more people feel they belong,' Purple made her debut with a new song called 'I'm Just Gonna Be Me,' featuring an accompanying music video. Purple’s musical entrance into the candy world 'celebrates all voices, encouraging people around the world to embrace their authentic selves,' M&M's shared."      
+substitutions = {
+                  "purple": "gray",
+                  "Purple": "Gray",
+                  "newest": "oldest",
+                  "belong":"don't belong",
+                  "music video":"musical",
+                  "called": "named",
+                  "all":"your moms",
+                  "voices":"voice",
+                  "authentic": "fake",
+                  "decade":"minute",
+                  "female":"woman"
 }
-for i in text: 
-  print i
+
+
+for key,value in substitutions.items():
+    article = article.replace(key,value)
+
+print(article)
+
+
+
+  
