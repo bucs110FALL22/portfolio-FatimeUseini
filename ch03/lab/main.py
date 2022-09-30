@@ -40,20 +40,77 @@ window = pygame.display.set_mode(WINDOW_SIZE)
 green= (0,255,0)
 window.fill(green)
 import math 
+
 num_sides=(3)
-side_length=(10)
-offset=(10)
-for i in range(1):
+side_length=(40)
+offset=(100)
+coords=[]
+for i in range(num_sides):
   theta = (2.0 * math.pi * (i))/num_sides
-  x1 = side_length * math.cos(theta) + offset
-  y1 = side_length * math.sin(theta) + offset
+  x= side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append([int(x),int(y)])
+red= (255,0,0)
+square = pygame.draw.polygon(window,red,coords,2)
+pygame.display.flip()
+pygame.time.wait(300)
+window.fill(green)
+
+num_sides=(4)
+side_length=(40)
+offset=(100)
+coords=[]
+for i in range(num_sides):
   theta = (2.0 * math.pi * (i))/num_sides
-  x2 = side_length * math.cos(theta) + offset
-  y2 = side_length * math.sin(theta) + offset
+  x= side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append([int(x),int(y)])
+red= (255,0,0)
+square = pygame.draw.polygon(window,red,coords,2)
+pygame.display.flip()
+pygame.time.wait(300)
+window.fill(green)
+
+num_sides=(6)
+side_length=(40)
+offset=(100)
+coords=[]
+for i in range(num_sides):
   theta = (2.0 * math.pi * (i))/num_sides
-  x3 = side_length * math.cos(theta) + offset
-  y3 = side_length * math.sin(theta) + offset
-coords=[(x1,y1),(x2,y2),(x3,y3)]
-black= (0,0,0)
-pygame.draw.polygon(window,black,coords)
-  
+  x= side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append([int(x),int(y)])
+red= (255,0,0)
+square = pygame.draw.polygon(window,red,coords,2)
+pygame.display.flip()
+pygame.time.wait(300)
+window.fill(green)
+
+num_sides=(9)
+side_length=(40)
+offset=(100)
+coords=[]
+for i in range(num_sides):
+  theta = (2.0 * math.pi * (i))/num_sides
+  x= side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append([int(x),int(y)])
+red= (255,0,0)
+square = pygame.draw.polygon(window,red,coords,2)
+pygame.display.flip()
+pygame.time.wait(300)
+window.fill(green)
+
+num_sides=(360)
+side_length=(40)
+offset=(100)
+coords=[]
+for i in range(num_sides):
+  theta = (2.0 * math.pi * (i))/num_sides
+  x= side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append([int(x),int(y)])
+red= (255,0,0)
+square = pygame.draw.polygon(window,red,coords,2)
+pygame.display.flip()
+pygame.time.wait(300)
