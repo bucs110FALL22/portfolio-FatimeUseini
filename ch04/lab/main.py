@@ -82,22 +82,72 @@ red= (255,0,0)
 blue=(0,0,255)
 white = (255, 255, 255)
 
-
-pygame.draw.rect(window, white, [0, 0, 200, 200],)
+red_button= pygame.draw.rect(window, red, [0, 0, 100, 200],)
+pygame.draw.rect(window, blue, [0, 100, 100, 200],)
 pygame.display.flip()
-pygame.draw.circle(window, red, [100,100], 100)
+
+
+player_pick=input("Pick player red or blue:")
+
+while True:
+  for event in pygame.event.get():
+    if event.type == pygame.mouse.get_pressed:
+      if event.mouse == pygame.mouse.get_pos:
+          if red_button.colidepoint(pygame.mouse.get_pos):
+             player_pick.input=red
+          else:
+            player_pick.input=red
+        
+ 
+pygame.display.window.fill(black)
+
+pygame.draw.rect(window, red, [0, 0, 200, 200],)
+pygame.display.flip()
+pygame.draw.circle(window, white, [100,100], 100)
 pygame.draw.circle(window, black, [100,100], 100,1)
 pygame.display.flip()
 
-pygame.draw.rect(window, black, [200, 0, 200, 200],)
-pygame.display.flip()
-pygame.draw.circle(window, blue, [300,100], 100)
-pygame.draw.circle(window, black, [300,100], 100,1)
-pygame.display.flip()
 
 pygame.draw.line(window, black,[0,100],[400,100],2)
 pygame.draw.line(window, black,[100,0],[100,200],2)
 pygame.draw.line(window, black,[300,0],[300,200],2)
+pygame.display.flip()
+pygame.time.wait(3000)
+
+
+
+
+width=200
+for i in range(10):
+  x2= random.randrange(200)
+  y2= random.randrange(200)
+  coordinates= (x2,y2)
+  x1= 100
+  y1= 100
+  center=(x1,y1)
+  distance_from_center=math.hypot(x1-x2, y1-y2)
+  is_in_circle = distance_from_center <= width/2
+  if is_in_circle:
+    pygame.draw.circle(window, red, [x2, y2], 4)
+  else:
+    pygame.draw.circle(window, black, [x2, y2], 4)
+  pygame.display.flip()
+  pygame.time.wait(100)
+  x2= random.randrange(200)
+  y2= random.randrange(200)
+  coordinates= (x2,y2)
+  x1= 100
+  y1= 100
+  center=(x1,y1)
+  distance_from_center=math.hypot(x1-x2, y1-y2)
+  is_in_circle = distance_from_center <= width/2
+  if is_in_circle:
+    pygame.draw.circle(window, blue, [x2, y2], 4)
+  else:
+    pygame.draw.circle(window, black, [x2, y2], 4)
+  pygame.display.flip()
+  pygame.time.wait(100)
+  
 pygame.display.flip()
 pygame.time.wait(3000)
 
