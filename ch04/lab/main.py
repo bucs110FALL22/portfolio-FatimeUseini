@@ -71,7 +71,7 @@ blue_button = pygame.draw.rect(window, blue, [0, 100, 100, 200],)
 pygame.display.flip()
 
 
-while range(1):
+while True:
   team= input("choose player red or blue:")
   mouse_x, mouse_y = pygame.mouse.get_pos()
   for event in pygame.event.get():
