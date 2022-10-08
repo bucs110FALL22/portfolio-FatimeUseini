@@ -1,7 +1,7 @@
 import pygame
 import random
+import math
 pygame.init()
-import math 
 window_width=200
 window_height=200
 window=pygame.display.set_mode([window_width, window_height])
@@ -15,26 +15,9 @@ red= (255,0,0)
 blue=(0,0,255)
 white = (255, 255, 255)
 
-num_sides=(360)
-side_length=(100)
-offset=(100)
-coords=[]
-for i in range(num_sides):
-  theta = (2.0 * math.pi * (i))/num_sides
-  x= side_length * math.cos(theta) + offset
-  y = side_length * math.sin(theta) + offset
-  coords.append([int(x),int(y)])
-circle = pygame.draw.polygon(window,red,coords,)
-pygame.display.flip()
 
-
-for i in range(num_sides):
-  theta = (2.0 * math.pi * (i))/num_sides
-  x= side_length * math.cos(theta) + offset
-  y = side_length * math.sin(theta) + offset
-  coords.append([int(x),int(y)])
-
-circle = pygame.draw.polygon(window,black,coords,1)
+  
+pygame.draw.circle(window, red, [100,100], 100)
 pygame.display.flip()
 
 pygame.draw.rect(window, black, [0, 0, 100, 100], 1)
@@ -70,11 +53,12 @@ for i in range(10):
 
 
 pygame.time.wait(3000)
+window.fill(black)
 
 #Part C
 
-window_width=400
-window_height=400
+window_width=200
+window_height=200
 window=pygame.display.set_mode([window_width, window_height])
 green= (0,255,0)
 black= (0,0,0)
@@ -83,26 +67,30 @@ blue=(0,0,255)
 white = (255, 255, 255)
 
 red_button= pygame.draw.rect(window, red, [0, 0, 100, 200],)
-pygame.draw.rect(window, blue, [0, 100, 100, 200],)
+blue_button = pygame.draw.rect(window, blue, [0, 100, 100, 200],)
 pygame.display.flip()
 
 
-player_pick=input("Pick player red or blue:")
-
-while True:
+while range(1):
+  team= input("choose player red or blue:")
+  mouse_x, mouse_y = pygame.mouse.get_pos()
   for event in pygame.event.get():
-    if event.type == pygame.mouse.get_pressed:
-      if event.mouse == pygame.mouse.get_pos:
-          if red_button.colidepoint(pygame.mouse.get_pos):
-             player_pick.input=red
-          else:
-            player_pick.input=red
-        
- 
-pygame.display.window.fill(black)
+      if event.type == pygame.MOUSEBUTTONDOWN:
+        if blue_button.collidepoint(mouse_x, mouse_y):
+          team ="blue"
+          print("blue")
+        else:
+          team = "red"
+          print("red")
+      pygame.display.flip()
+  
 
-pygame.draw.rect(window, red, [0, 0, 200, 200],)
+      
+    
+window.fill(black)
+pygame.draw.rect(window, green, [0, 0, 200, 200],)
 pygame.display.flip()
+pygame.time.wait(300)
 pygame.draw.circle(window, white, [100,100], 100)
 pygame.draw.circle(window, black, [100,100], 100,1)
 pygame.display.flip()
@@ -116,19 +104,20 @@ pygame.time.wait(3000)
 
 
 
-
-width=200
+howManyred = 0
+howManyblue=0
 for i in range(10):
   x2= random.randrange(200)
   y2= random.randrange(200)
   coordinates= (x2,y2)
   x1= 100
   y1= 100
-  center=(x1,y1)
+  center=(x1,y1)  
   distance_from_center=math.hypot(x1-x2, y1-y2)
-  is_in_circle = distance_from_center <= width/2
+  is_in_circle = distance_from_center <= window_width/2
   if is_in_circle:
     pygame.draw.circle(window, red, [x2, y2], 4)
+    howManyred+=1
   else:
     pygame.draw.circle(window, black, [x2, y2], 4)
   pygame.display.flip()
@@ -140,14 +129,29 @@ for i in range(10):
   y1= 100
   center=(x1,y1)
   distance_from_center=math.hypot(x1-x2, y1-y2)
-  is_in_circle = distance_from_center <= width/2
+  is_in_circle = distance_from_center <= window_width/2
   if is_in_circle:
-    pygame.draw.circle(window, blue, [x2, y2], 4)
+    pygame.draw.circle(window, blue, [x2, y2], 4)  
+    howManyblue+=1
   else:
     pygame.draw.circle(window, black, [x2, y2], 4)
   pygame.display.flip()
   pygame.time.wait(100)
-  
-pygame.display.flip()
-pygame.time.wait(3000)
 
+if howManyred>howManyblue:
+  print("red player wins")
+elif howManyred==howManyblue:
+  print("red player and blue player tie")
+else: 
+  print("blue player wins")
+
+
+      
+pygame.display.flip()
+pygame.time.wait(5000) 
+
+print(howManyred, howManyblue)
+
+ 
+
+    
