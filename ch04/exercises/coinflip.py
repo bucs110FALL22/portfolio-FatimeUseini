@@ -13,7 +13,16 @@ while true:
      my_turtle.right(90)
      my_turtle.forward(50)
 
+while is_in_screen:
+  coin= random.radnrange(0,2)
+  if coin==0:
+     my_turtle.left(90)
+  else:
+     my_turtle.right(90)
+  my_turtle.forward(50)
 
+xrange: window_width()/2
+yrange: window_width()/2
 
 window= turtle.Screen()
 window.exitonclick()
