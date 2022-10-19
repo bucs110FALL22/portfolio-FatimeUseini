@@ -17,4 +17,8 @@ def percentage_to_letter(score):
 score= input("Input your score.:")
 score= percentage_to_letter(score)
 print(score)
-#def is_passing(letter=none):
+def is_passing(score):
+  if score in 'ABC':
+    return True 
+  else:
+    return False 
