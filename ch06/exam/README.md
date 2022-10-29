@@ -1,4 +1,4 @@
-#CS110 Midterm Exam 
+# CS110 Midterm Exam 
 ## SHORT DESCRIPTION: The program creates three heart snowflakes that can be altered in size. 
 ## KNOWN BUGS AND INCOMPLETE PARTS: N/A
 ## REFERENCES: N/A
