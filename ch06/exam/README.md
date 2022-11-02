@@ -53,5 +53,4 @@ def main():
   my_turtle.hideturtle()
 main()
 
-window= turtle.Screen()
 window.exitonclick()    
