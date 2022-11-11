@@ -13,7 +13,7 @@ class StringUtility:
     if count<5:
       return str(count)
     else:
-      return f"many"
+      return "many"
       
   def bothEnds(self):
     if len(self.string) >= 2: 
@@ -24,17 +24,25 @@ class StringUtility:
       
   def fixStart(self):
     if len(self.string)>=1:
-      firstl= self.string[0]
+      first_ch= self.string[0]
       for i in self.string:
-        mystring= self.string[1: ].replace(firstl,"*")    
+        mystring= self.string[1: ].replace(first_ch,"*")    
       return self.string[0]+ mystring
     else: 
       return ('')
 
   def asciiSum(self):
-    for i in self.string:
-      mystring= ord(i)
-    return mystring
+    ascii_codes=[]
+    for ch in range(len(self.string)):
+      ascii_codes.append(ord(self.string[ch]))
+    return sum(ascii_codes)
+
+  def cipher(self):
+    return ord(self.string(i)+len(self.string))   
+    
+    
+
+                
 
 
   
