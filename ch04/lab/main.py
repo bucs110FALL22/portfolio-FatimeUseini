@@ -77,15 +77,14 @@ while True:
   for event in pygame.event.get():
       if event.type == pygame.MOUSEBUTTONDOWN:
         if blue_button.collidepoint(mouse_x, mouse_y):
-          team ="blue"
-          print("blue")
+          team= blue
+          #print("blue")
         else:
-          team = "red"
-          print("red")
+          team = red
+          #print("red")
+      if event.type == pygame.MOUSEBUTTONUP:
+        break
       pygame.display.flip()
-  
-
-      
     
 window.fill(black)
 pygame.draw.rect(window, green, [0, 0, 200, 200],)
@@ -105,7 +104,7 @@ pygame.time.wait(3000)
 
 
 howManyred = 0
-howManyblue=0
+howManyblue= 0
 for i in range(10):
   x2= random.randrange(200)
   y2= random.randrange(200)
