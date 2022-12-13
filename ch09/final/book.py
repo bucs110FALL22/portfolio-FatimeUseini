@@ -8,7 +8,7 @@ class Book1():
      args: self
      return: N/A
      """
-     self.api_url= 'https://covers.openlibrary.org/b/isbn/9780141331973-M.jpg'
+     self.api_url= str('https://covers.openlibrary.org/b/isbn/9780141331973-M.jpg')
   def get(self):
     """
     Opens url and converts it into an image. 
@@ -26,7 +26,7 @@ class Book2():
      args: self
      return: N/A
      """
-     self.api_url= 'https://covers.openlibrary.org/b/isbn/9780141377094-M.jpg'
+     self.api_url= str('https://covers.openlibrary.org/b/isbn/9780141377094-M.jpg')
   def get(self):
     """
     Opens url and converts it into an image. 

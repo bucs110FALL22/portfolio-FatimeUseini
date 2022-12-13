@@ -8,7 +8,7 @@ class Art1():
      args: self
      return: N/A
      """
-     self.api_url= "https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg"
+     self.api_url= str("https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg")
   def get(self):
     """
     Opens url and converts it into an image. 
@@ -26,7 +26,7 @@ class Art2():
      args: self
      return: N/A
      """
-     self.api_url= "https://images.metmuseum.org/CRDImages/dp/original/DP802556.jpg"
+     self.api_url= str("https://images.metmuseum.org/CRDImages/dp/original/DP802556.jpg")
   def get(self):
     """
     Opens url and converts it into an image. 
